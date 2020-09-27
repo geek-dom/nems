@@ -16,7 +16,9 @@ Presteps
 
 Ensure that the device to be monitored is SNMP capable and SNMP is configured.
 
-![](snmp_001.png)
+.. figure:: snmp_001.png
+  :width: 300
+  :align: right
 
 MIB/OID
 =======
@@ -25,7 +27,10 @@ Vendor sites and community forums may provide the MIBs and OIDs, but there are w
 Method 1 - MIB Browser
 ----------------------
 There are several free MIB browsers available on the internet. Most provide a tree structure of the device.
-##snmp_002.png##
+
+.. figure:: snmp_002.png
+  :width: 300
+  :align: right
 
 Method 2 - snmpwalk
 -------------------
@@ -36,7 +41,9 @@ snmpwalk -v *snmp version* -c *snmp community* *IP*
 
 A list of OIDs will be returned.  Copy the results to a text document or spreadsheet for easy reference.
 
-##snmp_003.png##
+.. figure:: snmp_003.png
+  :width: 300
+  :align: right
 
 Testing with ./check_snmp
 =========================
@@ -54,7 +61,9 @@ In this example, uptime will be test using both the OID and Object name using th
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
-##snmp_004.png##
+.. figure:: snmp_004.png
+  :width: 300
+  :align: right
 
 Both work and return the same information.  Depending on the device and which MIB it uses (standard or vendor) will dictate which one is used.
 
@@ -69,10 +78,23 @@ Follow these steps to configure a basic SNMP check.
 - For ARG1 at the bottom of the screen, at the minimum, enter the community and object to check. *-c public -o iso.3.6.1.2.1.1.3.0*  You can add warnings *-w* and criticals *-c* if the appropriate
 - Add new check to host
 - Generate and deploy Nagios config
-##snmp_005/006.png##
+
+.. figure:: snmp_005.png
+  :width: 300
+  :align: right
+.. figure:: snmp_006.png
+  :width: 300
+  :align: right
 
 Launch Adagios and validate the check ran with no issues.
+
+.. figure:: snmp_007.png
+  :width: 300
+  :align: right
 
 Links
 =====
 https://www.rfc-editor.org/
+http://www.oid-info.com/index.htm
+http://www.ireasoning.com/mibbrowser.shtml
+http://www.oidview.com/mibs/detail.html
