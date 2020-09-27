@@ -16,7 +16,7 @@ Presteps
 
 Ensure that the device to be monitored is SNMP capable and SNMP is configured.
 
-##snmp_001.png##
+![](snmp_001.png)
 
 MIB/OID
 =======
